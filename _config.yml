@@ -1,7 +1,7 @@
-title: DaikonScramble
+title: DaikonSoft
 description: An indie game developed by daikonsoft
 theme: jekyll-theme-minimal
-baseurl: /DaikonScramble
+baseurl: /DaikonSoft
 
 header_pages:
   - pages/about.md
