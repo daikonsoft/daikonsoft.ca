@@ -20,7 +20,7 @@ body.crt {
   background-attachment: fixed;
   padding: 10px;
   overflow: auto;
-  position: relative;
+  position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   animation: textShadow 1.6s infinite;
 }
@@ -40,7 +40,6 @@ body.crt::before {
   transform: translateZ(0);
 }
 
-
 body.crt::after {
   content: " ";
   position: fixed;
@@ -54,25 +53,16 @@ body.crt::after {
 
 }
 
-/* === DISABLE CRT ANIMATION === */
-
-body.no-fx {
-  animation: none !important;
-}
-
-body.no-fx::after {
-  animation: none !important;
-}
-
 
 
 /* === CONTAINER === */
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 1fr 1fr 1.8fr 0.2fr;
+  grid-template-rows: 0.2fr 0.8fr 1fr 1fr 1.8fr 0.2fr;
   grid-template-areas:
-    "bar bar bar . . bunny-button"
+    "bar bar bar . . ."
+    "header header header header box box"
     "main main main main main main"
     "main main main main main main"
     "main main main main main main"
@@ -82,6 +72,7 @@ body.no-fx::after {
   margin: auto;
   position: relative;
   z-index: 1;
+  
 }
 
 /* === BAR === */
@@ -96,6 +87,16 @@ body.no-fx::after {
   background-color: #1f1f2b;
 }
 
+/* === HEADER === */
+.header {
+  grid-area: header;
+  border: 1px solid #b4befe;
+  border-right: none;
+  box-shadow: 0 0 4px #cba6f740 inset;
+  background-color: #1f1f2b;
+  display: flex;
+  align-items: flex-end
+}
 
 /* === SITE TITLE === */
 .gametitle {
@@ -106,19 +107,31 @@ body.no-fx::after {
   color: #cba6f7;
 }
 
-
+/* === BOX NEXT TO HEADER === */
+.box {
+  grid-area: box;
+  border: 1px solid #b4befe;
+  border-radius: 0 20px 0 0;
+  padding: 10px;
+  background-color: #1f1f2b;
+  box-shadow: 0 0 4px #b4befe40 inset;
+  color: #f5c2e7;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
 
 /* === MAIN AREA === */
 .main {
   display: grid;
-  grid-template-columns: 0.4fr 1.5fr 1.5fr;
-  grid-template-rows: 1fr 1fr 2fr 2fr 2fr;
+  grid-template-columns: 0.4fr 1.5fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas:
-    "navigation post-history post-history"
-    "navigation post-history post-history"
-    "content content content"
-    "content content content"
-    "content content content";
+    "navigation content content"
+    "navigation content content"
+    "navigation content content"
+    "navigation content content"
+    "navigation content content";
   grid-area: main;
 }
 
@@ -126,7 +139,7 @@ body.no-fx::after {
 .navigation {
   grid-area: navigation;
   border: 1px solid #b4befe;
-  border-bottom: none;
+  border-top: none;
   background-color: #1f1f2b;
   box-shadow: 0 0 4px #b4befe40 inset;
   overflow: hidden;
@@ -140,38 +153,6 @@ body.no-fx::after {
   font-weight: bold;
 }
 
-.post-history {
-  grid-area: post-history;
-  border: 1px solid #b4befe;
-  border-radius: 0px 20px 0px 0px;
-  background-color: #1f1f2b;
-  box-shadow: 0 0 4px #b4befe40 inset;
-  overflow-x: hidden;
-  overflow-y: auto;
-  border-left: none;
-  border-bottom: none;
-  padding-right: 8px;
-}
-
-/* === NAV BUTTONS === */
-.bunny-button {
-  grid-area: bunny-button;
-  width: 128px;          /* size of the button */
-  height: 128px;
-  display: inline-block; /* centers the image inside */
-  align-items: center;
-  justify-content: start;
-  pointer-events: auto;
-  cursor: pointer;      /* makes it feel clickable */
-  position: absolute;
-}
-
-.bunny-button img {
-  width: 100%;          /* image scales to fit container */
-  height: auto;
-  display: block;
-}
-
 /* === NAV BUTTONS === */
 .button {
   width: 150px;
@@ -182,10 +163,9 @@ body.no-fx::after {
   box-shadow: 0 1px 2px #1f1f2b inset;
 }
 
-.button:hover {
-  -webkit-animation: wiggle 0.25s 2;
+/* .button:hover {
   animation: wiggle 0.25s 2;
-}
+} */
 
 .button:hover a {
   text-shadow:
@@ -200,54 +180,12 @@ body.no-fx::after {
   color: #f5c2e7;
 }
 
-/* === DIALOGUE === */
-
-.dialogue-box {
-  display: grid;
-  grid-template-columns: 140px 1fr 140px;
-  gap: 10px;
-  align-items: start;
-  padding: 20px;
-  background-color: #1f1f2b;
-  border-radius: 20px;
-  color: #f5c2e7;
-}
-
-
-
-.dialogue-avatar {
-  width: 100%;
-  max-width: 120px;
-  border: 2px solid #cba6f7;
-  box-shadow: 0 0 6px #cba6f740 inset;
-  margin-top: 20px;
-  border-radius: 20px;
-  outline: 2px solid #cba6f7;
-  transform: scaleX(-1);
-  outline-offset: 4px;   /* space between borders */
-}
-
-.dialogue-empty {
-  width: 140px;
-}
-
-.dialogue-text {
-  font-size: 18px;
-  line-height: 1.6;
-  padding: 20px;
-  background-color: #2d2f42;
-  border: 1px solid #b4befe;
-  border-radius: 10px;
-  box-shadow: 0 0 4px #b4befe40 inset;
-  white-space: normal;
-}
-
-
 /* === CONTENT AREA === */
 .content {
   grid-area: content;
   border: 1px solid #b4befe;
-  border-radius: 0px 0px 0px 0px;
+  border-top: none;
+  border-left: none;
   background-color: #1f1f2b;
   box-shadow: 0 0 4px #b4befe40 inset;
   padding: 10px;
@@ -257,7 +195,6 @@ body.no-fx::after {
 
 /* === BOXES INSIDE CONTENT === */
 .box1 {
-  grid-area: post-title;
   width: 100%;
   padding: 10px;
   background-color: #34354a;
@@ -266,7 +203,6 @@ body.no-fx::after {
   box-shadow: 0 0 6px #cba6f740 inset;
   color: #cba6f7;
 }
-
 
 .text {
   width: 100%;
@@ -291,6 +227,8 @@ body.no-fx::after {
   color: #b4befe;
   box-shadow: 0 0 4px #b4befe40 inset;
 }
+
+/* === CRT ANIMATIONS === */
 
 @keyframes flicker {
   0%   { opacity: 0.28; }
@@ -365,22 +303,10 @@ body.no-fx::after {
 }
 
 
-/* === WIGGLE KEYFRAMES === */
-@-webkit-keyframes wiggle {
-  0%   { -webkit-transform: skewX(24deg); transform: skewX(24deg); }
-  10%  { -webkit-transform: skewX(-8deg); transform: skewX(-8deg); }
-  20%  { -webkit-transform: skewX(55deg); transform: skewX(55deg); }
-  30%  { -webkit-transform: skewX(-90deg); transform: skewX(-90deg); }
-  40%  { -webkit-transform: skewX(29deg); transform: skewX(29deg); }
-  50%  { -webkit-transform: skewX(-90deg); transform: skewX(-90deg); }
-  60%  { -webkit-transform: skewX(3deg); transform: skewX(3deg); }
-  70%  { -webkit-transform: skewX(-2deg); transform: skewX(-2deg); }
-  80%  { -webkit-transform: skewX(1deg); transform: skewX(1deg); }
-  90%  { -webkit-transform: skewX(10deg); transform: skewX(10deg); }
-  100% { -webkit-transform: skewX(0deg); transform: skewX(0deg); }
-}
 
-@keyframes wiggle {
+/* === WIGGLE KEYFRAMES === */
+
+/* @keyframes wiggle {
   0%   { transform: skewX(24deg); }
   10%  { transform: skewX(-8deg); }
   20%  { transform: skewX(55deg); }
@@ -392,4 +318,4 @@ body.no-fx::after {
   80%  { transform: skewX(1deg); }
   90%  { transform: skewX(10deg); }
   100% { transform: skewX(0deg); }
-}
+} */
