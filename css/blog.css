@@ -1,5 +1,29 @@
+:root {
+  --border-color: #b4befe;
+  --header-color:#cba6f7;
+  --text-color: #65c4de;
+  --text-background:#181825;
+  --pearl-color: #65c4de;
+  --link-color: #f5c2e7;
+
+  --text2-color: #e4c9af;
+  --other-color: #d2738a;
+
+
+  
+  --color1: #b4befe;
+  --color2: #cba6f7;
+  --color3: #f5c2e7;
+  --color4:#181825;
+  --color5: #94e2d5;
+  --neh: #823F25;
+
+
+}
+
+
 a:link, a:visited {
-  color: #cba6f7;
+  color: var(--header-color);
   text-decoration: underline;
 }
 a:hover {
@@ -87,7 +111,7 @@ body.no-fx::after {
 /* === BAR === */
 .bar {
   grid-area: bar;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-bottom: none;
   border-radius: 20px 20px 0 0;
   padding: 10px;
@@ -103,7 +127,7 @@ body.no-fx::after {
   font-weight: bold;
   width: 100%;
   padding: 10px;
-  color: #cba6f7;
+  color: var(--header-color);
 }
 
 
@@ -125,7 +149,7 @@ body.no-fx::after {
 /* === NAVIGATION === */
 .navigation {
   grid-area: navigation;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-bottom: none;
   background-color: #1f1f2b;
   box-shadow: 0 0 4px #b4befe40 inset;
@@ -136,13 +160,13 @@ body.no-fx::after {
 .title {
   padding: 10px;
   text-align: center;
-  color: #cba6f7;
+  color: var(--header-color);
   font-weight: bold;
 }
 
 .post-history {
   grid-area: post-history;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-radius: 0px 20px 0px 0px;
   background-color: #1f1f2b;
   box-shadow: 0 0 4px #b4befe40 inset;
@@ -176,7 +200,7 @@ body.no-fx::after {
 .button {
   width: 150px;
   padding: 10px 10px 10px 20px;
-  border-top: 1px solid #b4befe;
+  border-top: 1px solid var(--border-color);
   border-bottom: none;
   background-color: #282a36;
   box-shadow: 0 1px 2px #1f1f2b inset;
@@ -197,7 +221,7 @@ body.no-fx::after {
 /* === NAV INTRO === */
 .intro {
   padding: 10px;
-  color: #f5c2e7;
+  color: var(--header-color);
 }
 
 /* === DIALOGUE === */
@@ -210,7 +234,7 @@ body.no-fx::after {
   padding: 20px;
   background-color: #1f1f2b;
   border-radius: 20px;
-  color: #f5c2e7;
+  color: var(--border-color);
 }
 
 
@@ -218,11 +242,11 @@ body.no-fx::after {
 .dialogue-avatar {
   width: 100%;
   max-width: 120px;
-  border: 2px solid #cba6f7;
+  border: 2px solid var(--pearl-color);
   box-shadow: 0 0 6px #cba6f740 inset;
   margin-top: 20px;
   border-radius: 20px;
-  outline: 2px solid #cba6f7;
+  outline: 2px solid var(--pearl-color);
   transform: scaleX(-1);
   outline-offset: 4px;   /* space between borders */
 }
@@ -236,17 +260,18 @@ body.no-fx::after {
   line-height: 1.6;
   padding: 20px;
   background-color: #2d2f42;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   box-shadow: 0 0 4px #b4befe40 inset;
   white-space: normal;
+  color: var(--text-color);
 }
 
 
 /* === CONTENT AREA === */
 .content {
   grid-area: content;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-radius: 0px 0px 0px 0px;
   background-color: #1f1f2b;
   box-shadow: 0 0 4px #b4befe40 inset;
@@ -261,17 +286,18 @@ body.no-fx::after {
   width: 100%;
   padding: 10px;
   background-color: #34354a;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   box-sizing: border-box;
   box-shadow: 0 0 6px #cba6f740 inset;
-  color: #cba6f7;
+  color: var(--header-color);
 }
 
 
 .text {
+  font-size: 18px;
   width: 100%;
   background-color: #1f1f2b;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   padding: 10px;
   box-sizing: border-box;
   margin-top: 10px;
@@ -282,13 +308,13 @@ body.no-fx::after {
 /* === FOOTER === */
 .footer {
   grid-area: footer;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-top: none;
   border-radius: 0 0 20px 20px;
   padding: 10px;
   text-align: center;
   background-color: #1f1f2b;
-  color: #b4befe;
+  color: var(--header-color);
   box-shadow: 0 0 4px #b4befe40 inset;
 }
 

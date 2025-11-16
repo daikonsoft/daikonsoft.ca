@@ -1,12 +1,58 @@
+:root {
+  --border-color: #b4befe;
+  --header-color:#cba6f7;
+  --secondary-header-color: #ffbae6;
+  --text-color: #f5c2e7;
+  --text-background:#181825;
+  --link-color: #f5c2e7;
+
+  --text2-color: #e4c9af;
+  --other-color: #d2738a;
+
+  --pearl-color: #659dde;
+  --scientist-color: #e4c9af;
+  
+  --color1: #acc2ff;
+  --color2: #d5aaff;
+  --color3: #ffbae6;
+  --color4:#181825;
+  --color5: #c5f6ff;
+  --color6: #bdffd5;
+  --color7:#2940a4;
+  --color8: #9aa0ee;
+  --color9: #ffcf73;
+
+
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+.content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}
+
+
 a:link, a:visited {
-  color: #cba6f7;
+  color: var(--link-color);
   text-decoration: underline;
 }
 a:hover {
-  color: #f5c2e7;
+  color: var(--header-color);
 }
 a:active {
-  color: #b4befe;
+  color: var(--header-color);
+}
+
+/* === DISABLE CRT ANIMATION === */
+
+body.no-fx {
+  animation: none !important;
+}
+
+body.no-fx::after {
+  animation: none !important;
 }
 
 /* === GLOBAL BODY === */
@@ -59,10 +105,9 @@ body.crt::after {
 .container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.2fr 0.8fr 1fr 1fr 1.8fr 0.2fr;
+  grid-template-rows: 0.2fr 1fr 1fr 1.8fr 0.2fr;
   grid-template-areas:
-    "bar bar bar . . ."
-    "header header header header box box"
+    "bar bar bar . . bunny-button"
     "main main main main main main"
     "main main main main main main"
     "main main main main main main"
@@ -78,24 +123,27 @@ body.crt::after {
 /* === BAR === */
 .bar {
   grid-area: bar;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-bottom: none;
   border-radius: 20px 20px 0 0;
   padding: 10px;
   text-align: right;
   box-shadow: 0 0 4px #cba6f740 inset;
   background-color: #1f1f2b;
+  color: var(--header-color);
+  font-weight: bold;
 }
 
 /* === HEADER === */
 .header {
   grid-area: header;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-right: none;
   box-shadow: 0 0 4px #cba6f740 inset;
   background-color: #1f1f2b;
   display: flex;
   align-items: flex-end
+  
 }
 
 /* === SITE TITLE === */
@@ -104,42 +152,92 @@ body.crt::after {
   font-weight: bold;
   width: 100%;
   padding: 10px;
-  color: #cba6f7;
+  color: var(--header-color);
 }
 
 /* === BOX NEXT TO HEADER === */
 .box {
   grid-area: box;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-radius: 0 20px 0 0;
   padding: 10px;
   background-color: #1f1f2b;
   box-shadow: 0 0 4px #b4befe40 inset;
-  color: #f5c2e7;
+  color: var(--header-color);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+}
+.box-content {
+  font-size: 40px;
+  font-weight: bold;
+  width: 100%;
+  padding: 10px;
+  color: var(--header-color);
+  justify-self: center;
+  display: flex;
+  align-items: center;
+
+}
+.box-content h2 {
+  position:relative;
+  top:15px;
+}
+
+.box-content .pixel-pearl {
+  position: relative;
+  bottom:15px;
+}
+
+.pixel-pearl img {
+  height: 100%;         /* ➜ fill the full height of the box */
+  width: auto;          /* maintain aspect ratio */
+  display: block;
+  image-rendering: pixelated;
+}
+
+.pixel-pearl {
+  height: 100%;         /* ➜ matches .box-content height */
+  display: flex;
+  align-items: center;
 }
 
 /* === MAIN AREA === */
 .main {
   display: grid;
-  grid-template-columns: 0.4fr 1.5fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 0.4fr 1.5fr 1.5fr;
+  grid-template-rows: 1fr 1fr 2fr 2fr 2fr;
   grid-template-areas:
-    "navigation content content"
-    "navigation content content"
-    "navigation content content"
-    "navigation content content"
-    "navigation content content";
+    "navigation box box"
+    "navigation box box"
+    "content content content"
+    "content content content"
+    "content content content";
   grid-area: main;
+}
+
+.bunny-button {
+  grid-area: bunny-button;
+  width: 128px;          /* size of the button */
+  height: 128px;
+  display: inline-block; /* centers the image inside */
+  align-items: center;
+  justify-content: start;
+  pointer-events: auto;
+  cursor: pointer;      /* makes it feel clickable */
+  position: absolute;
+}
+
+.bunny-button img {
+  width: 100%;          /* image scales to fit container */
+  height: auto;
+  display: block;
 }
 
 /* === NAVIGATION === */
 .navigation {
   grid-area: navigation;
-  border: 1px solid #b4befe;
-  border-top: none;
+  border: 1px solid var(--border-color);
   background-color: #1f1f2b;
   box-shadow: 0 0 4px #b4befe40 inset;
   overflow: hidden;
@@ -149,7 +247,7 @@ body.crt::after {
 .title {
   padding: 10px;
   text-align: center;
-  color: #cba6f7;
+  color: var(--secondary-header-color);
   font-weight: bold;
 }
 
@@ -157,7 +255,7 @@ body.crt::after {
 .button {
   width: 150px;
   padding: 10px 10px 10px 20px;
-  border-top: 1px solid #b4befe;
+  border-top: 1px solid var(--border-color);
   border-bottom: none;
   background-color: #282a36;
   box-shadow: 0 1px 2px #1f1f2b inset;
@@ -177,15 +275,16 @@ body.crt::after {
 /* === NAV INTRO === */
 .intro {
   padding: 10px;
-  color: #f5c2e7;
+  color: var(--header-color);
 }
 
 /* === CONTENT AREA === */
 .content {
   grid-area: content;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-top: none;
   border-left: none;
+  border-right: none;
   background-color: #1f1f2b;
   box-shadow: 0 0 4px #b4befe40 inset;
   padding: 10px;
@@ -198,35 +297,71 @@ body.crt::after {
   width: 100%;
   padding: 10px;
   background-color: #34354a;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   box-sizing: border-box;
   box-shadow: 0 0 6px #cba6f740 inset;
-  color: #cba6f7;
+  color: var(--header-color);
 }
 
 .text {
+  font-size: 18px;
   width: 100%;
-  background-color: #1f1f2b;
-  border: 1px solid #b4befe;
+  background-color: var(--text-background);
+  border: 1px solid var(--border-color);
   padding: 10px;
   box-sizing: border-box;
   margin-top: 10px;
   box-shadow: 0 0 6px #b4befe40 inset;
-  color: #f5c2e7;
+  color: var(--text-color);
 }
 
 /* === FOOTER === */
 .footer {
   grid-area: footer;
-  border: 1px solid #b4befe;
+  border: 1px solid var(--border-color);
   border-top: none;
   border-radius: 0 0 20px 20px;
   padding: 10px;
   text-align: center;
   background-color: #1f1f2b;
-  color: #b4befe;
+  color: var(--header-color);
   box-shadow: 0 0 4px #b4befe40 inset;
 }
+
+
+#blossom-container {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 9999; /* above content but under UI overlays */
+}
+
+.blossom-toggle {
+  cursor: pointer;
+}
+
+.blossom {
+  position: absolute;
+  top: -50px;
+  font-size: 18px;
+  opacity: 0.8;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) rotate(0deg);
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+  }
+}
+
+
 
 /* === CRT ANIMATIONS === */
 

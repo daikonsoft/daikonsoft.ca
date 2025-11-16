@@ -13,40 +13,93 @@
 
 <div class="container">
   <div class="bar">DaikonSoft</div>
-  <div class="header">
-    <div class="gametitle">DaikonScramble Devblog</div>
-  </div>
-  <div class="box">
-    A place where we document the trials and tribulations of making games.
-  </div>
+  <div class="bunny-button"><img src="./assets/bunny-button.png" alt="Bunny Icon"></div>
+
+
   <div class="main">
     <div class="navigation">
       <div class="title">Navigation</div>
       <div class="button"><a href="./index.html">Home</a></div>
-      <div class="button"><a href="./about.html">About</a></div>
       <div class="button"><a href="./blog.html">Devblog</a></div>
-      <div class="button" style="border-bottom:1px solid #b4befe;"><a href="./assets.html">Assets</a></div>
-      <div class="intro">Welcome to DaikonScramble development!</div>
+      <div class="button" style="border-bottom:1px solid var(--border-color);"><a href="./assets.html">Assets</a></div>
+    </div>
+    <div class="box">
+      <div class="box-content">
+      <div class="pixel-pearl blossom-toggle" ><img src="./assets/pearl.png" alt="Pearl Pixel Art" style="transform: scaleX(-1);"></div>
+      <h2>DaikonScramble</h2>
+      <div class="pixel-pearl blossom-toggle"><img src="./assets/pearl.png" alt="Pearl Pixel Art"></div>
+      </div>
+
     </div>
     <div class="content">
-      <div class="box1">
-        What is DaikonScramble?
+      <div class="box1" style="margin-top:10px;">
+        <h4 style="margin-top:5px;"style="margin-bottom:5px;">What is DaikonScramble? </h4>
         <div class="text">
-          DaikonScramble combines the endless wave, single stage gameplay of the classic 1983 Mario Bros arcade game, the movement and fighting mechanics of Super Smash Bros, bunnies, and an ever-expanding elevator shaft. It's a passion project born from a desire to create something meaningful and creative.
+        DaikonScramble is a bunny inspired platform beat-em-up incorporating tower defence elements, and a elevator based progression system where you descend down a seemingly bottomless burrow.<br>
+        <br>
+        It was created from the desire to combine the endless wave, single stage elements of the classic 1983 Mario Bros arcade game, The movement and fighting mechanics of Super Smash Bros, Bunnies, and an ever expanding elevator shaft.<br>
+        <br>
+        At least that is the case on paper, but the real reason for it's creation is that my partner (electronelle) and I (monomori) were becoming increasingly frustrated with our jobs, the state of the world, and things holding us back from creating something meaningful and creative. So in a sense the original idea we had was "let's make something purely because we want to, and not because anything else is saying we should."<br>
         </div>
       </div>
-      <div class="box1" style="margin-top:10px;">
-        Latest Updates
+      <div class="box1" style="margin-top:15px;">
+        <h4 style="margin-top:5px;"style="margin-bottom:5px;">Who are DaikonSoft?</h4>
         <div class="text">
-          Check out the devblog for the latest development progress, technical deep-dives, and behind-the-scenes stories about making DaikonScramble.
+          Lead (only) Developer: monomori<br>
+           <p style="text-indent: 2em;">"I Like technology that existed prior to my birth, creating things that serve absolutely no purpose except for generating my own catharsis, and also the color pink."</p>
         </div>
+        <div class="text">
+          Lead (only) Artist: electronelle<br>
+          <p style="text-indent: 2em;">"I like Victorian era clothing, all things Greek, furry little creatures that hop, painting things that evoke a sense of warmth and wonder, and also the color pink."</p>
+        </div>
+      </div>
+
+        
       </div>
     </div>
-  </div>
   <div class="footer">
     DaikonSoft © 2025. Made with passion and a bit of desperation.
   </div>
 </div>
 
+<div id="blossom-container"></div>
+<script>
+document.querySelector('.bunny-button').addEventListener('click', () => {
+    document.body.classList.toggle('no-fx');
+});
+
+let blossomInterval = null;
+let blossomsOn = false;
+
+function createBlossom() {
+  const blossom = document.createElement('div');
+  blossom.classList.add('blossom');
+  blossom.textContent = '🥕';
+
+  const size = Math.random() * 12 + 12;
+  const xPos = Math.random() * window.innerWidth;
+
+  blossom.style.left = xPos + 'px';
+  blossom.style.fontSize = size + 'px';
+  blossom.style.animationDuration = (Math.random() * 4 + 4) + 's';
+
+  document.getElementById('blossom-container').appendChild(blossom);
+
+  setTimeout(() => blossom.remove(), 9000);
+}
+
+document.querySelectorAll('.blossom-toggle').forEach(el => {
+  el.addEventListener('click', () => {
+    blossomsOn = !blossomsOn;
+
+    if (blossomsOn) {
+      blossomInterval = setInterval(createBlossom, 250);
+    } else {
+      clearInterval(blossomInterval);
+      blossomInterval = null;
+    }
+  });
+});
+</script>
 </body>
 </html>
