@@ -31,41 +31,34 @@ for (const file of logFiles) {
   const title = document.querySelector("title")?.textContent || file;
   const pubDate = new Date(fs.statSync(filePath).mtime).toUTCString();
 
-  // Extract text for description (first 200 chars or first paragraph)
-  const textContent = content.textContent.trim();
+  // Extract filename without extension for the query parameter
+  const logName = path.basename(file, ".html");
+
+  // Extract clean text for description
+  const textContent = content.textContent.trim().replace(/\s+/g, ' ');
   const description = textContent.substring(0, 200) + (textContent.length > 200 ? "..." : "");
 
+  // Extract content HTML
   let htmlContent = content.innerHTML;
+
+  // Convert relative image src to absolute URLs
   htmlContent = htmlContent.replace(
     /src="\.\/assets\//g,
     `src="${siteUrl}/assets/`
   );
 
-  const fullDocumentHTML = `
-  <!DOCTYPE html>
-  <html>
-  <head>
-  <meta charset="utf-8"/>
-  </head>
-  <body>
-  <div class="content">
-${htmlContent}
-  </div>
-  </body>
-  </html>
-  `;
+  // Wrap with outer content div
+  const wrappedHtml = `<div class="content">\n${htmlContent}\n</div>`;
 
-  // Insert RSS item with BOTH description and content:encoded
+  // Insert RSS item with devlog.html?log= link format
   rss += `
     <item>
       <title><![CDATA[${title}]]></title>
-      <link>${siteUrl}/logs/${file}</link>
-      <guid isPermaLink="true">${siteUrl}/logs/${file}</guid>
+      <link>${siteUrl}/devlog.html?log=${logName}</link>
+      <guid isPermaLink="true">${siteUrl}/devlog.html?log=${logName}</guid>
       <pubDate>${pubDate}</pubDate>
       <description><![CDATA[${description}]]></description>
-      <content:encoded><![CDATA[
-${fullDocumentHTML}
-      ]]></content:encoded>
+      <content:encoded><![CDATA[${wrappedHtml}]]></content:encoded>
     </item>
   `;
 }
