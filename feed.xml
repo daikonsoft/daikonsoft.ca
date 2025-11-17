@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+
+    <title>DaikonScramble Devlog</title>
+    <link>https://daikonsoft.ca/devlog.html</link>
+    <description>Updates, dev logs, and personal ramblings from the DaikonSoft team.</description>
+    <language>en-us</language>
+    <generator>Handmade RSS Generator</generator>
+
+    <item>
+      <title>Devlog 0.1 — NEHHHHHHHHHHHHHHHHHHH</title>
+      <link>https://daikonsoft.ca/logs/devlog-0-1.html</link>
+      <guid isPermaLink="true">https://daikonsoft.ca/logs/devlog-0-1.html</guid>
+      <pubDate>Mon, 17 Nov 2025 12:00:00 GMT</pubDate>
+
+      <description><![CDATA[
+        <p>This is a test!</p>
+      ]]></description>
+    </item>
+
+  </channel>
+</rss>
