@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./css/index.css">
+  <link rel="alternate" type="application/rss+xml" title="DaikonScramble Devlog RSS" href="/feed.xml">
 
   <title>DaikonSoft</title>
  
@@ -20,7 +21,7 @@
     <div class="navigation">
       <div class="title">Navigation</div>
       <div class="button"><a href="./index.html">Home</a></div>
-      <div class="button"><a href="./blog.html">Devblog</a></div>
+      <div class="button"><a href="./devlog.html">Devlog</a></div>
       <div class="button" style="border-bottom:1px solid var(--border-color);"><a href="./assets.html">Assets</a></div>
     </div>
     <div class="box">
@@ -74,7 +75,7 @@ let blossomsOn = false;
 function createBlossom() {
   const blossom = document.createElement('div');
   blossom.classList.add('blossom');
-  blossom.textContent = '🥕';
+  blossom.innerHTML = '<img src="./assets/neskaya8.gif">';
 
   const size = Math.random() * 12 + 12;
   const xPos = Math.random() * window.innerWidth;
