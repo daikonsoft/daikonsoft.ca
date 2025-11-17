@@ -6,7 +6,7 @@ const siteUrl = "https://daikonsoft.ca";
 const logsDir = "./logs";
 const outputFile = "./feed.xml";
 
-// Get a list of all devlog HTML files
+// Get list of all devlog HTML files
 const logFiles = fs.readdirSync(logsDir).filter(f => f.endsWith(".html"));
 
 // Start RSS XML
@@ -21,7 +21,7 @@ let rss = `<?xml version="1.0" encoding="UTF-8"?>
     <generator>GitHub Actions RSS Auto-Generator</generator>
 `;
 
-// Loop through each devlog file
+// Loop through devlog files
 for (const file of logFiles) {
   const filePath = path.join(logsDir, file);
   const html = fs.readFileSync(filePath, "utf-8");
@@ -32,6 +32,16 @@ for (const file of logFiles) {
   const title = document.querySelector("title")?.textContent || file;
   const pubDate = new Date(fs.statSync(filePath).mtime).toUTCString();
 
+  let htmlContent = content.innerHTML;
+
+  htmlContent = htmlContent.replace(
+    /src="\.\/assets\//g,
+    `src="${siteUrl}/assets/`
+  );
+
+  const wrappedHtml = `<div class="content">\n${htmlContent}\n</div>`;
+
+  // Insert RSS item
   rss += `
     <item>
       <title><![CDATA[${title}]]></title>
@@ -39,12 +49,13 @@ for (const file of logFiles) {
       <guid isPermaLink="true">${siteUrl}/logs/${file}</guid>
       <pubDate>${pubDate}</pubDate>
       <content:encoded><![CDATA[
-${content.innerHTML}
+${wrappedHtml}
       ]]></content:encoded>
     </item>
   `;
 }
 
+// Close RSS
 rss += `
   </channel>
 </rss>
