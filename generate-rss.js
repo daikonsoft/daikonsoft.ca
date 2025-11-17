@@ -27,13 +27,15 @@ for (const file of logFiles) {
   const html = fs.readFileSync(filePath, "utf-8");
   const dom = new JSDOM(html);
   const document = dom.window.document;
-
   const content = document.querySelector(".content");
   const title = document.querySelector("title")?.textContent || file;
   const pubDate = new Date(fs.statSync(filePath).mtime).toUTCString();
 
-  let htmlContent = content.innerHTML;
+  // Extract text for description (first 200 chars or first paragraph)
+  const textContent = content.textContent.trim();
+  const description = textContent.substring(0, 200) + (textContent.length > 200 ? "..." : "");
 
+  let htmlContent = content.innerHTML;
   htmlContent = htmlContent.replace(
     /src="\.\/assets\//g,
     `src="${siteUrl}/assets/`
@@ -47,19 +49,20 @@ for (const file of logFiles) {
   </head>
   <body>
   <div class="content">
-  ${htmlContent}
+${htmlContent}
   </div>
   </body>
   </html>
   `;
 
-  // Insert RSS item
+  // Insert RSS item with BOTH description and content:encoded
   rss += `
     <item>
       <title><![CDATA[${title}]]></title>
       <link>${siteUrl}/logs/${file}</link>
       <guid isPermaLink="true">${siteUrl}/logs/${file}</guid>
       <pubDate>${pubDate}</pubDate>
+      <description><![CDATA[${description}]]></description>
       <content:encoded><![CDATA[
 ${fullDocumentHTML}
       ]]></content:encoded>
