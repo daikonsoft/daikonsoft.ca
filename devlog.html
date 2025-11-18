@@ -34,14 +34,9 @@
                 <div class="pearl-left"><img src="./assets/pearl.png" alt=""></div>
 
                 <div class="devlog-links">
-                    <p><a href="#" data-log="./logs/devlog-0-1.html">Devlog 0.1 — NEHHHHHH</a></p>
-                                        <p><a href="#" data-log="./logs/devlog-0-1.html">Devlog 0.1 — NEHHHHHH</a></p>
+                    <p><a href="#" data-log="./logs/devlog-0-1.html">Devlog 0.1 — Test 1</a></p>
+                    <p><a href="#" data-log="./logs/devlog-0-2.html">Devlog 0.2 — Test 2</a></p>
 
-                                                            <p><a href="#" data-log="./logs/devlog-0-1.html">Devlog 0.1 — NEHHHHHH</a></p>
-                                                            <p><a href="#" data-log="./logs/devlog-0-1.html">Devlog 0.1 — NEHHHHHH</a></p>
-                                                            <p><a href="#" data-log="./logs/devlog-0-1.html">Devlog 0.1 — NEHHHHHH</a></p>
-                                                            <p><a href="#" data-log="./logs/devlog-0-1.html">Devlog 0.1 — NEHHHHHH</a></p>
-                                                            <p><a href="#" data-log="./logs/devlog-0-1.html">Devlog 0.1 — NEHHHHHH</a></p>
 
                     <!-- more links later -->
                 </div>
@@ -72,7 +67,7 @@ document.querySelector('.bunny-button').addEventListener('click', () => {
     document.body.classList.toggle('no-fx');
 });
 
-document.querySelectorAll('.post-history a[data-log]').forEach(link => {
+document.querySelectorAll('.devlog-links a[data-log]').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
         const logFile = link.getAttribute('data-log')
@@ -117,7 +112,7 @@ window.onpopstate = (event) => {
 };
 
 if (!initialLog) {
-    const firstPost = document.querySelector('.post-history a[data-log]');
+    const firstPost = document.querySelector('.devlog-links a[data-log]');
     if (firstPost) {
         const logFile = firstPost.getAttribute('data-log')
             .replace("./logs/", "")
