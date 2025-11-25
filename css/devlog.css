@@ -350,6 +350,18 @@ body.no-fx::after {
   outline-offset: 4px;
 }
 
+.dialogue-avatar-scientist {
+  width: 100%;
+  max-width: 120px;
+  border: 2px solid #d2738a;
+  box-shadow: 0 0 6px #cba6f740 inset;
+  margin-top: 20px;
+  border-radius: 20px;
+  outline: 2px solid #d2738a;
+  transform: scaleX(-1);
+  outline-offset: 4px;
+}
+
 .dialogue-empty {
   width: 140px;
 }
