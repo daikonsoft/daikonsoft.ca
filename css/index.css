@@ -113,7 +113,7 @@ body.crt::after {
     "main main main main main main"
     "main main main main main main"
     "footer footer footer footer footer footer";
-  width: 1200px;
+  width: 1000px;
   height: 860px;
   margin: auto;
   position: relative;
@@ -210,7 +210,7 @@ body.crt::after {
 .main {
   display: grid;
   grid-template-columns: 0.4fr 1.5fr 1.5fr;
-  grid-template-rows: 1fr 0.7fr 2fr 2fr 2fr;
+  grid-template-rows: 1fr 0.5fr 2fr 2fr 2fr;
   grid-template-areas:
     "navigation box box"
     "navigation box box"
