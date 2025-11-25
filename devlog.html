@@ -34,10 +34,7 @@
                 <div class="pearl-left"><img src="./assets/pearl.png" alt=""></div>
 
                 <div class="devlog-links">
-                    <p><a href="#" data-log="./logs/devlog-0-1.html">Devlog 0.1 — Test 1</a></p>
-                    <p><a href="#" data-log="./logs/devlog-0-2.html">Devlog 0.2 — Test 2</a></p>
-
-
+                    <p><a href="#" data-log="./logs/devlog-0-1.html">Devlog 0.1 — Emotional Burrows & Research Rabbit Holes</a></p>
                     <!-- more links later -->
                 </div>
 
@@ -79,7 +76,7 @@ document.querySelectorAll('.devlog-links a[data-log]').forEach(link => {
 
 
 async function loadDevlog(logName) {
-    const url = `/logs/${logName}.html`;
+    const url = `./logs/${logName}.html`;
 
     try {
         const response = await fetch(url);
