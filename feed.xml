@@ -9,16 +9,16 @@
     <generator>GitHub Actions RSS Auto-Generator</generator>
 
     <item>
-      <title><![CDATA[Devlog 0.1]]></title>
+      <title><![CDATA[Devlog 0.1 — Emotional Burrows & Research Rabbit Holes]]></title>
       <link>https://daikonsoft.ca/devlog.html?log=devlog-0-1</link>
       <guid isPermaLink="true">https://daikonsoft.ca/devlog.html?log=devlog-0-1</guid>
-      <pubDate>Tue, 18 Nov 2025 08:26:36 GMT</pubDate>
-      <description><![CDATA[[Devlog 0.1 — Test 1] [Date] Bed sincerity yet therefore forfeited his certainty neglected questions. Pursuit chamber as elderly amongst on. Distant however warrant farther to of. My justice wishing p...]]></description>
+      <pubDate>Tue, 25 Nov 2025 08:27:35 GMT</pubDate>
+      <description><![CDATA[[Devlog 0.1 — Emotional Burrows & Research Rabbit Holes] [Date] I haven't worked on the game in a couple weeks, and the moment I opened the project my whole body went, “Nope...” as my mind flooded wit...]]></description>
       <content:encoded><![CDATA[<div class="content">
 
 
             <div class="box1">
-                <h1>[Devlog 0.1 — Test 1]</h1>
+                <h1>[Devlog 0.1 — Emotional Burrows &amp; Research Rabbit Holes]</h1>
                 <p class="post-date">[Date]</p>
             </div>
 
@@ -27,26 +27,27 @@
 
                 <div class="dialogue-text">
 
-                    <p>Bed sincerity yet therefore forfeited his certainty neglected questions. Pursuit chamber as elderly amongst on. Distant however warrant farther to of. My justice wishing prudent waiting in be. Comparison age not pianoforte increasing delightful now. Insipidity sufficient dispatched any reasonably led ask. Announcing if attachment resolution sentiments admiration me on diminution.</p>
 
-                    <p>Article evident arrived express highest men did boy. Mistress sensible entirely am so. Quick can manor smart money hopes worth too. Comfort produce husband boy her had hearing. Law others theirs passed but wishes. You day real less till dear read. Considered use dispatched melancholy sympathize discretion led. Oh feel if up to till like.</p>
+                    <p>I haven't worked on the game in a couple weeks, and the moment I opened the project my whole body went, “Nope...” as my mind flooded with self-dbout. You know that feeling where feeling like you <em>should</em> do something, ends up adding extra pressure and makes you avoid it even more? Yeah. That.</p>
 
-                    <p>Sportsman do offending supported extremity breakfast by listening. Decisively advantages nor expression unpleasing she led met. Estate was tended ten boy nearer seemed. As so seeing latter he should thirty whence. Steepest speaking up attended it as. Made neat an on be gave show snug tore.</p>
+                    <p>Maybe I just feel shitty because a mistake I made on a midterm the other day has permeated through every single molecule of my existence. There was a question I knew how to solve, like, actually knew, and during the test my brain just turned off. So today I did not feel like I am meant to be some character in a video game that shreds apart monsters with cybernetic claws and teeth... I felt like a run-of-the-mill bunny.</p>
 
-                    <p>Ye to misery wisdom plenty polite to as. Prepared interest proposal it he exercise. My wishing an in attempt ferrars. Visited eat you why service looking engaged. At place no walls hopes rooms fully in. Roof hope shy tore leaf joy paid boy. Noisier out brought entered detract because sitting sir. Fat put occasion rendered off humanity has.</p>
+                </div>
 
-                    <p>Village did removed enjoyed explain nor ham saw calling talking. Securing as informed declared or margaret. Joy horrible moreover man feelings own shy. Request norland neither mistake for yet. Between the for morning assured country believe. On even feet time have an no at. Relation so in confined smallest children unpacked delicate. Why sir end believe uncivil respect. Always get adieus nature day course for common. My little garret repair to desire he esteem.</p>
+                
 
-                    <p>Sentiments two occasional affronting solicitude travelling and one contrasted. Fortune day out married parties. Happiness remainder joy but earnestly for off. Took sold add play may none him few. If as increasing contrasted entreaties be. Now summer who day looked our behind moment coming. Pain son rose more park way that. An stairs as be lovers uneasy.</p>
+                <div class="dialogue-empty"></div>
+            </div>
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
 
-                    <p>Preserved defective offending he daughters on or. Rejoiced prospect yet material servants out answered men admitted. Sportsmen certainty prevailed suspected am as. Add stairs admire all answer the nearer yet length. Advantages prosperous remarkably my inhabiting so reasonably be if. Too any appearance announcing impossible one. Out mrs means heart ham tears shall power every.</p>
+                <div class="dialogue-text">
 
-                    <p>You disposal strongly quitting his endeavor two settling him. Manners ham him hearted hundred expense. Get open game him what hour more part. Adapted as smiling of females oh me journey exposed concern. Met come add cold calm rose mile what. Tiled manor court at built by place fanny. Discretion at be an so decisively especially. Exeter itself object matter if on mr in.</p>
 
-                    <p>Entire any had depend and figure winter. Change stairs and men likely wisdom new happen piqued six. Now taken him timed sex world get. Enjoyed married an feeling delight pursuit as offered. As admire roused length likely played pretty to no. Means had joy miles her merry solid order.</p>
-
-                    <p>Ham followed now ecstatic use speaking exercise may repeated. Himself he evident oh greatly my on inhabit general concern. It earnest amongst he showing females so improve in picture. Mrs can hundred its greater account. Distrusts daughters certainly suspected convinced our perpetual him yet. Words did noise taken right state are since.</p>
-
+                    <p>Anyway! My plan for today was...</p>
+                    <p>- Add a level loading system<br>
+                    - Make a basic enemy with very simple AI<br>
+                    - Maybe start working on a player health system</p>
                 </div>
 
                 
@@ -58,30 +59,10 @@
                 <div class="dialogue-empty"></div>
 
                 <div class="dialogue-text">
-                    <p>That sounds like a really difficult day, but it also shows something important about the nature of creative work...</p>
-
-                    <p>Sometimes the game waits because the rest of life needs you more.</p>
+                    <p>So bold of you to take ownership over <strong>MY</strong> schedule... I didn't know you knew how to program Pearl...</p>
                 </div>
 
-                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
-            </div>
-
-        
-</div>]]></content:encoded>
-    </item>
-  
-    <item>
-      <title><![CDATA[Devlog 0.2]]></title>
-      <link>https://daikonsoft.ca/devlog.html?log=devlog-0-2</link>
-      <guid isPermaLink="true">https://daikonsoft.ca/devlog.html?log=devlog-0-2</guid>
-      <pubDate>Tue, 18 Nov 2025 08:26:36 GMT</pubDate>
-      <description><![CDATA[[Devlog 0.2 — Test 2] [Date] so much depends upon a red wheel barrow glazed with rain water beside the white chickens.]]></description>
-      <content:encoded><![CDATA[<div class="content">
-
-
-            <div class="box1">
-                <h1>[Devlog 0.2 — Test 2]</h1>
-                <p class="post-date">[Date]</p>
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
             </div>
 
             <div class="dialogue-box">
@@ -89,42 +70,234 @@
 
                 <div class="dialogue-text">
 
-                    <p>so much depends upon</p>
+
+                    <p>Hehe, so usually when I say "my", what I actually mean is "our"</p>
                 </div>
-
-                
-
                 <div class="dialogue-empty"></div>
             </div>
-            <br>
 
             <div class="dialogue-box">
                 <div class="dialogue-empty"></div>
 
                 <div class="dialogue-text">
-                    <p>a red wheel barrow</p>
+                    <p>I think what you really mean is <strong>"your"</strong>...</p>
+                    <p>*Sigh*... Anyways the onwnership of plans is irrevelent, all that matters is that progress is made, and this report gets sent out.</p>
                 </div>
 
-                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
             </div>
 
-                        <div class="dialogue-box">
-                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
-
-                <div class="dialogue-text">
-
-                    <p>glazed with rain water</p>
-                </div>
-                <div class="dialogue-empty"></div>
-            </div>
-                        <div class="dialogue-box">
+            <div class="dialogue-box">
                 <div class="dialogue-empty"></div>
 
                 <div class="dialogue-text">
-                    <p>beside the white chickens.</p>
+                    <p>Speaking of which...</p>
+
+                    <p>Despite initial setbacks including the mental breakdown of our finest soldier, several tasks were successfully completed:</p>
+
+                    <p>- Implemented a functioning level loader<br>
+                    - Added a Smash Bros–style platform effect<br>
+                    - Resolved a bug where items were being picked up twice</p>
+
+                    <p>We concluded that the double pickup issue was caused by two colliders detecting items simultaneously. The solution was to move one collider into a child object named <code>PickupTrigger</code> to isolate responsibility.</p>
+
                 </div>
-                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
             </div>
+
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <div class="dialogue-text">
+                    <p>God it would be nice if I could isolate my midterm stress into a child object so it wouldn't effect every one of my components :(</p>
+                </div>
+                <div class="dialogue-empty"></div>
+            </div>
+
+            <div class="dialogue-box">
+                <div class="dialogue-empty"></div>
+
+                <div class="dialogue-text">
+                    <p>*Sigh* I think we all wish we had that ability...</p>
+                    <p>You know it might be possible if you let me experiment on your brain!</p>
+                </div>
+
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
+            </div>
+
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <div class="dialogue-text">
+                    <p>We agreed my enhancements would solely be for combat!</p>
+                </div>
+                <div class="dialogue-empty"></div>
+            </div>
+
+            <div class="dialogue-box">
+                <div class="dialogue-empty"></div>
+
+                <div class="dialogue-text">
+                    <p>Sorry, sometimes I get distracted by my fantasies...</p>
+                    <p>Speaking of distractions, by comparing "our" plan with the progress report, it's unhideable "we" only managed to complete some of our tasks.</p>
+                    <p>Pearl would you like to explain what happened?</p>
+                </div>
+
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
+            </div>
+
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <div class="dialogue-text">
+                    <p>Honestly... That bug was just driving us crazy... And sometimes it's hard to move on with a task lists when you have this nagging problem in the back of your mind...</p>
+                    <p>And I think it's okay to get distracted sometimes...</p>
+                    <p>Because even though we didn't get everything on the list done, and even if we don't have anything flashy to present, we still managed to push through the mental barriers holding us back.</p>
+                </div>
+                <div class="dialogue-empty"></div>
+            </div>
+
+            <div class="dialogue-box">
+                <div class="dialogue-empty"></div>
+
+                <div class="dialogue-text">
+                <p>Also Fixing that bug taught us something real about structuring entities and using child objects to isolate their components from eachother. So despite our shortcomings, tangible progress was made and with this the cause grows. It's like I always tell you pearl, "Intelectual growth is the catalyst for an adversaries fear...</p>
+                <p>So remind yourself, even if there is no tangible feature attached to it, learning something is always beneficial!</p>
+                </div>
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
+            </div>
+
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <div class="dialogue-text">
+                    <p>That makes sense, and I do agree that learning something is always beneficial, but sometimes I feel like I'm stuck at a crossroad.</p>
+                    <p>And I wish there was some way of telling which path will lead to more benefit. How should I spend my time...</p>
+                    <p>Honestly it's a question that keeps me frozen... Sometimes I tell people I am "decision disabled"</p>
+                </div>
+                <div class="dialogue-empty"></div>
+            </div>
+
+            <div class="dialogue-box">
+                <div class="dialogue-empty"></div>
+
+                <div class="dialogue-text">
+                <p> You're telling me...</p>
+                <p>Today I wanted to create platforms  that you could jump up through but that could still be stood on, just like in the hit game Super Smash Bros. So I dug around the burrownet, and everyone said: “Use a Platform Effector 2D, and switch your Composite Collider from outlines to polygons.”</p>
+
+                <p>Excellent. It works. But also: <em>why?</em> What is the Platform Effector doing? Why does polygon geometry matter? What forces govern this?</p>
+                <p>How could I possible live with myself without knowing the answer?</p>
+                </div>
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
+            </div>
+
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <div class="dialogue-text">
+                    <p>Maybe it works via TMB.</p>
+                </div>
+                <div class="dialogue-empty"></div>
+            </div>
+
+            <div class="dialogue-box">
+                <div class="dialogue-empty"></div>
+
+                <div class="dialogue-text">
+                    <p>TMB?</p>
+                </div>
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
+            </div>
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <div class="dialogue-text">
+                    <p>Trust me bro ;)</p>
+                </div>
+                <div class="dialogue-empty"></div>
+            </div>
+
+            <div class="dialogue-box">
+                <div class="dialogue-empty"></div>
+
+                <div class="dialogue-text">
+                    <p>I hate you so much...</p>
+                </div>
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
+            </div>
+
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <div class="dialogue-text">
+                    <p>You walked into it... Anyway weren't you talking about polygons or something?</p>
+                </div>
+                <div class="dialogue-empty"></div>
+            </div>
+
+
+            <div class="dialogue-box">
+                <div class="dialogue-empty"></div>
+
+                <div class="dialogue-text">
+                    <p>Right... So as I was saying, this is where that fork in the road you were speaking of comes up.</p>
+                    <p><strong>Path A:</strong> I Accept the magic (or TMB...). Move on. Make more progress with the game.</p><p>
+                    </p><p><strong>Path B:</strong> I Research everything, fall into documentation black holes, probably get lost on 50 tangents, somehow end up on the wikipedia page for the Alaskan Ptarmigan, and gain both knowledge and new questions.</p>
+
+            <p>I just hate leaving little gaps in my understanding… but also I have to accept if I chase every question I'll never finish the game.</p>
+
+            <p>For the record: I still do not know why the collider geometry must be polygons.</p>
+
+            <p><strong>Pearl:</strong> And it is now a personal attack.</p>
+                </div>
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
+            </div>
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <div class="dialogue-text">
+                    <p>So which did you choose?</p>
+                </div>
+                <div class="dialogue-empty"></div>
+            </div>
+
+            <div class="dialogue-box">
+                <div class="dialogue-empty"></div>
+
+                <div class="dialogue-text">
+                <p>I still do not know why the collider geometry must be polygons.</p>
+                </div>
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
+            </div>
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <div class="dialogue-text">
+                    <p>And will you be able to live with yourself?</p>
+                </div>
+                <div class="dialogue-empty"></div>
+            </div>
+
+            <div class="dialogue-box">
+                <div class="dialogue-empty"></div>
+
+                <div class="dialogue-text">
+                <p>Every moment of unknowing is living hell :)</p>
+                </div>
+                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" class="dialogue-avatar">
+            </div>
+
+            <div class="dialogue-box">
+                <img src="https://daikonsoft.ca/assets/pearl-avatar.png" class="dialogue-avatar">
+
+                <div class="dialogue-text">
+                    <p>Sounds like you should compartmentalize that feeling into a child process ;)</p>
+                </div>
+                <div class="dialogue-empty"></div>
+            </div>
+
+            
 
         
 </div>]]></content:encoded>
