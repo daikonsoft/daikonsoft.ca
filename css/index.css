@@ -1,37 +1,15 @@
 :root {
   --border-color: #b4befe;
   --header-color:#cba6f7;
-  --secondary-header-color: #ffbae6;
   --text-color: #f5c2e7;
   --text-background:#181825;
+  --pearl-color: #65c4de;
+  --scientist-color: #d2738a;
   --link-color: #f5c2e7;
 
-  --text2-color: #e4c9af;
-  --other-color: #d2738a;
-
-  --pearl-color: #659dde;
-  --scientist-color: #e4c9af;
-  
-  --color1: #acc2ff;
-  --color2: #d5aaff;
-  --color3: #ffbae6;
-  --color4:#181825;
-  --color5: #c5f6ff;
-  --color6: #bdffd5;
-  --color7:#2940a4;
-  --color8: #9aa0ee;
-  --color9: #ffcf73;
-
-
-}
-.content::-webkit-scrollbar {
-  display: none;
+  --secondary-color: #e4c9af;
 }
 
-.content {
-  -ms-overflow-style: none;
-  scrollbar-width: none;  
-}
 
 
 a:link, a:visited {
@@ -45,21 +23,15 @@ a:active {
   color: var(--header-color);
 }
 
-/* === DISABLE CRT ANIMATION === */
-
-body.no-fx {
-  animation: none !important;
-}
-
-body.no-fx::after {
-  animation: none !important;
-}
 
 /* === GLOBAL BODY === */
-body.crt {
+body {
   font-family: ms ui gothic, sans-serif;
   font-size: 15px;
   color: #f5c2e7;
+  text-shadow: 3.8709px 0 1px rgba(0,30,255,.5),
+                -3.8709px 0 1px rgba(255,0,80,.3),
+                0 0 3px;
   background: radial-gradient(circle at top left, #cba6f720 0%, transparent 60%),
               radial-gradient(circle at bottom right, #cba6f720 0%, transparent 60%),
               linear-gradient(to bottom right, #282a36, #1f1f2b, #282a36);
@@ -68,13 +40,15 @@ body.crt {
   overflow: auto;
   position: relative;
   top: 0; left: 0; right: 0; bottom: 0;
-  animation: textShadow 1.6s infinite;
+
+  animation: none;
 }
 
-/* === CRT EFFECTS COVER ENTIRE PAGE === */
-body.crt::before {
+/* === CRT EFFECTS === */
+.crt::before {
   content: " ";
   position: fixed;
+  display: block;
   top: 0; left: 0; right: 0; bottom: 0;
   background: linear-gradient(rgba(18,16,16,0) 50%, rgba(0,0,0,0.25) 50%),
               linear-gradient(90deg, rgba(255,0,0,0.06),
@@ -86,18 +60,101 @@ body.crt::before {
   transform: translateZ(0);
 }
 
-body.crt::after {
+
+
+.crt::after {
   content: " ";
+  display: block;
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(18,16,16,0.1);
   opacity: 0;
   pointer-events: none;
   z-index: 2;
-  animation: flicker 0.15s infinite;
+  animation: none;
   transform: translateZ(0);
-
 }
+
+.crt::before,
+.crt::after {
+  contain: layout style paint;
+  will-change: opacity;
+}
+
+body.fx::before,
+body.fx::after {
+  animation: flicker 0.15s infinite;
+}
+
+/* === CRT ANIMATIONS === */
+
+@keyframes flicker {
+    0% {
+    opacity: 0.27861;
+    }
+    5% {
+    opacity: 0.34769;
+    }
+    10% {
+    opacity: 0.23604;
+    }
+    15% {
+    opacity: 0.90626;
+    }
+    20% {
+    opacity: 0.18128;
+    }
+    25% {
+    opacity: 0.83891;
+    }
+    30% {
+    opacity: 0.65583;
+    }
+    35% {
+    opacity: 0.67807;
+    }
+    40% {
+    opacity: 0.26559;
+    }
+    45% {
+    opacity: 0.84693;
+    }
+    50% {
+    opacity: 0.96019;
+    }
+    55% {
+    opacity: 0.08594;
+    }
+    60% {
+    opacity: 0.20313;
+    }
+    65% {
+    opacity: 0.71988;
+    }
+    70% {
+    opacity: 0.53455;
+    }
+    75% {
+    opacity: 0.37288;
+    }
+    80% {
+    opacity: 0.71428;
+    }
+    85% {
+    opacity: 0.70419;
+    }
+    90% {
+    opacity: 0.7003;
+    }
+    95% {
+    opacity: 0.36108;
+    }
+    100% {
+    opacity: 0.24387;
+    }
+}
+
+
 
 
 
@@ -193,15 +250,15 @@ body.crt::after {
 }
 
 .pixel-pearl img {
-  height: 160px;         /* ➜ fill the full height of the box */
-  width: auto;          /* maintain aspect ratio */
+  height: 160px;        
+  width: auto;         
   display: block;
   image-rendering: pixelated;
 
 }
 
 .pixel-pearl {
-  height: 100%;         /* ➜ matches .box-content height */
+  height: 100%;         
   display: flex;
   align-items: center;
 }
@@ -222,18 +279,19 @@ body.crt::after {
 
 .bunny-button {
   grid-area: bunny-button;
-  width: 128px;          /* size of the button */
+  width: 128px;         
   height: 128px;
-  display: inline-block; /* centers the image inside */
+  display: inline-block; 
   align-items: center;
   justify-content: start;
   pointer-events: auto;
-  cursor: pointer;      /* makes it feel clickable */
+  cursor: pointer;     
   position: absolute;
+  z-index: 20;
 }
 
 .bunny-button img {
-  width: 100%;          /* image scales to fit container */
+  width: 100%;          
   height: auto;
   display: block;
 }
@@ -300,8 +358,17 @@ body.crt::after {
   color: #f5c2e7;
 }
 
-/* === BOXES INSIDE CONTENT === */
+/* === MAKE SCROLLBAR INVISIBLE === */
+.content::-webkit-scrollbar {
+  display: none;
+}
 
+.content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;  
+}
+
+/* === BOXES INSIDE CONTENT === */
 
 .text-box {
   display: grid;
@@ -391,7 +458,7 @@ body.crt::after {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  z-index: 9999; /* above content but under UI overlays */
+  z-index: 10;
 }
 
 .blossom-toggle {
@@ -400,10 +467,11 @@ body.crt::after {
 
 .blossom {
   position: absolute;
-  top: -50px;
+  transform: translateY(-50px);
   font-size: 15px;
   opacity: 0.8;
   animation: fall linear forwards;
+  will-change: transform;
 }
 
 @keyframes fall {
@@ -417,20 +485,12 @@ body.crt::after {
 
 
 
-/* === CRT ANIMATIONS === */
 
-@keyframes flicker {
-  0%   { opacity: 0.28; }
-  10%  { opacity: 0.24; }
-  20%  { opacity: 0.18; }
-  30%  { opacity: 0.66; }
-  40%  { opacity: 0.27; }
-  50%  { opacity: 0.96; }
-  60%  { opacity: 0.20; }
-  70%  { opacity: 0.53; }
-  80%  { opacity: 0.71; }
-  90%  { opacity: 0.70; }
-  100% { opacity: 0.24; }
+
+/* === TEXT SHADOW FLICKERING MAKE CPU GO BRRRRRR === */
+
+/* body.fx {
+  animation: textShadow 1.6s infinite; 
 }
 
 @keyframes textShadow {
@@ -439,19 +499,9 @@ body.crt::after {
                  -0.4389px 0 1px rgba(255,0,80,.3),
                  0 0 3px;
   }
-  10% {
-    text-shadow: 0.0296px 0 1px rgba(0,30,255,.5),
-                 -0.0296px 0 1px rgba(255,0,80,.3),
-                 0 0 3px;
-  }
   20% {
     text-shadow: 3.4794px 0 1px rgba(0,30,255,.5),
                  -3.4794px 0 1px rgba(255,0,80,.3),
-                 0 0 3px;
-  }
-  30% {
-    text-shadow: 0.7016px 0 1px rgba(0,30,255,.5),
-                 -0.7016px 0 1px rgba(255,0,80,.3),
                  0 0 3px;
   }
   40% {
@@ -459,19 +509,9 @@ body.crt::after {
                  -3.8709px 0 1px rgba(255,0,80,.3),
                  0 0 3px;
   }
-  50% {
-    text-shadow: 0.0808px 0 1px rgba(0,30,255,.5),
-                 -0.0808px 0 1px rgba(255,0,80,.3),
-                 0 0 3px;
-  }
   60% {
     text-shadow: 2.2022px 0 1px rgba(0,30,255,.5),
                  -2.2022px 0 1px rgba(255,0,80,.3),
-                 0 0 3px;
-  }
-  70% {
-    text-shadow: 0.4887px 0 1px rgba(0,30,255,.5),
-                 -0.4887px 0 1px rgba(255,0,80,.3),
                  0 0 3px;
   }
   80% {
@@ -479,32 +519,10 @@ body.crt::after {
                  -0.0833px 0 1px rgba(255,0,80,.3),
                  0 0 3px;
   }
-  90% {
-    text-shadow: 3.4433px 0 1px rgba(0,30,255,.5),
-                 -3.4433px 0 1px rgba(255,0,80,.3),
-                 0 0 3px;
-  }
   100% {
     text-shadow: 2.6209px 0 1px rgba(0,30,255,.5),
                  -2.6209px 0 1px rgba(255,0,80,.3),
                  0 0 3px;
   }
-}
-
-
-
-/* === WIGGLE KEYFRAMES === */
-
-/* @keyframes wiggle {
-  0%   { transform: skewX(24deg); }
-  10%  { transform: skewX(-8deg); }
-  20%  { transform: skewX(55deg); }
-  30%  { transform: skewX(-90deg); }
-  40%  { transform: skewX(29deg); }
-  50%  { transform: skewX(-90deg); }
-  60%  { transform: skewX(3deg); }
-  70%  { transform: skewX(-2deg); }
-  80%  { transform: skewX(1deg); }
-  90%  { transform: skewX(10deg); }
-  100% { transform: skewX(0deg); }
 } */
+
