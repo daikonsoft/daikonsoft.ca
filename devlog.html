@@ -60,21 +60,44 @@
 
 </div>
 <script>
-document.querySelector('.bunny-button').addEventListener('click', () => {
-    document.body.classList.toggle('fx');
-});
+// === INITIALIZATION ===
+function init() {
+    setupCRTButton();
+    setupDevlogLinks();
+    restoreInitialDevlog();
+}
 
-document.querySelectorAll('.devlog-links a[data-log]').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const logFile = link.getAttribute('data-log')
-            .replace("./logs/", "")
-            .replace(".html", "");
-        loadDevlog(logFile);
+
+// === CRT TOGGLE ===
+function setupCRTButton() {
+    const btn = document.querySelector('.bunny-button');
+    if (!btn) return;
+
+    // Remove old listeners if they exist to prevent duplicates
+    btn.replaceWith(btn.cloneNode(true));
+    const freshBtn = document.querySelector('.bunny-button');
+
+    freshBtn.addEventListener('click', () => {
+        document.body.classList.toggle('fx');
     });
-});
+}
 
 
+// === DEVLOG LINK HANDLERS ===
+function setupDevlogLinks() {
+    document.querySelectorAll('.devlog-links a[data-log]').forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const logFile = link.getAttribute('data-log')
+                .replace("./logs/", "")
+                .replace(".html", "");
+            loadDevlog(logFile);
+        });
+    });
+}
+
+
+// === LOAD DEVLOG ===
 async function loadDevlog(logName) {
     const url = `./logs/${logName}.html`;
 
@@ -92,23 +115,32 @@ async function loadDevlog(logName) {
 
         document.title = doc.title || "DaikonScramble Devlog";
 
-        history.pushState({log: logName}, "", `?log=${logName}`);
+        history.pushState({ log: logName }, "", `?log=${logName}`);
     } catch (err) {
         console.error("Failed to load devlog:", err);
     }
 }
 
-const params = new URLSearchParams(window.location.search);
-const initialLog = params.get("log");
-if (initialLog) loadDevlog(initialLog);
 
+// === HANDLE BACK/FORWARD NAVIGATION ===
 window.onpopstate = (event) => {
     if (event.state && event.state.log) {
         loadDevlog(event.state.log);
     }
 };
 
-if (!initialLog) {
+
+// === AUTOLOAD FIRST POST ===
+function restoreInitialDevlog() {
+    const params = new URLSearchParams(window.location.search);
+    const initialLog = params.get("log");
+
+    if (initialLog) {
+        loadDevlog(initialLog);
+        return;
+    }
+
+    // If no log parameter, load the first item
     const firstPost = document.querySelector('.devlog-links a[data-log]');
     if (firstPost) {
         const logFile = firstPost.getAttribute('data-log')
@@ -118,6 +150,11 @@ if (!initialLog) {
     }
 }
 
+
+// === RUN INIT  ===
+window.addEventListener("pageshow", init);
+
 </script>
+
 </body>
 </html>

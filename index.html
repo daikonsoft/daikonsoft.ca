@@ -71,13 +71,34 @@
 
 <div id="blossom-container"></div>
 <script>
-document.querySelector('.bunny-button').addEventListener('click', () => {
-    document.body.classList.toggle('fx');
-});
-
+// === GLOBAL STATE ===
 let blossomInterval = null;
 let blossomsOn = false;
 
+
+// === INITIALIZATION ===
+function init() {
+  setupCRTButton();
+  setupBlossomToggles();
+}
+
+
+// === CRT TOGGLE ===
+function setupCRTButton() {
+  const btn = document.querySelector('.bunny-button');
+  if (!btn) return;
+
+  // Remove old listeners by cloning node
+  btn.replaceWith(btn.cloneNode(true));
+  const freshBtn = document.querySelector('.bunny-button');
+
+  freshBtn.addEventListener('click', () => {
+    document.body.classList.toggle('fx');
+  });
+}
+
+
+// === BLOSSOMS ===
 function createBlossom() {
   const blossom = document.createElement('div');
   blossom.classList.add('blossom');
@@ -95,18 +116,42 @@ function createBlossom() {
   setTimeout(() => blossom.remove(), 9000);
 }
 
-document.querySelectorAll('.blossom-toggle').forEach(el => {
-  el.addEventListener('click', () => {
-    blossomsOn = !blossomsOn;
 
-    if (blossomsOn) {
-      blossomInterval = setInterval(createBlossom, 250);
-    } else {
-      clearInterval(blossomInterval);
-      blossomInterval = null;
-    }
+// === BLOSSOM TOGGLE ===
+function setupBlossomToggles() {
+  // Remove possible duplicate intervals from previous visits
+  if (blossomInterval) {
+    clearInterval(blossomInterval);
+    blossomInterval = null;
+  }
+
+  // Reset state on load
+  blossomsOn = false;
+
+  // Remove any old listeners by cloning nodes
+  document.querySelectorAll('.blossom-toggle').forEach(el => {
+    el.replaceWith(el.cloneNode(true));
   });
-});
+
+  // Re-select new clean nodes
+  document.querySelectorAll('.blossom-toggle').forEach(el => {
+    el.addEventListener('click', () => {
+      blossomsOn = !blossomsOn;
+
+      if (blossomsOn) {
+        blossomInterval = setInterval(createBlossom, 250);
+      } else {
+        clearInterval(blossomInterval);
+        blossomInterval = null;
+      }
+    });
+  });
+}
+
+
+// === RUN INIT ===
+window.addEventListener('pageshow', init);
 </script>
+
 </body>
 </html>
