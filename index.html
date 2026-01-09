@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/index.css">
   <link rel="alternate" type="application/rss+xml" title="DaikonScramble Devlog" href="/feed.xml">
 
@@ -70,6 +70,8 @@
 </div>
 
 <div id="blossom-container"></div>
+<div id="custom-cursor"></div>
+
 <script>
 // === GLOBAL STATE ===
 let blossomInterval = null;
@@ -151,6 +153,22 @@ function setupBlossomToggles() {
 
 // === RUN INIT ===
 window.addEventListener('pageshow', init);
+
+// === GIF CURSOR ===
+const cursor = document.getElementById('custom-cursor');
+let cursorInitialized = false;
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+
+  if (!cursorInitialized) {
+    cursorInitialized = true;
+    cursor.style.opacity = 1;
+  }
+});
+
+
 </script>
 
 </body>

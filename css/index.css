@@ -11,7 +11,6 @@
 }
 
 
-
 a:link, a:visited {
   color: var(--header-color);
   text-decoration: underline;
@@ -40,9 +39,24 @@ body {
   overflow: auto;
   position: relative;
   top: 0; left: 0; right: 0; bottom: 0;
-
+  cursor: none;
   animation: none;
 }
+
+#custom-cursor {
+  position: fixed;
+  width: 32px;          
+  height: 32px;
+  pointer-events: none; 
+  z-index: 9999;
+  background-image: url('../assets/neskaya8.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translate(-50%, -50%); 
+  opacity: 0;
+  transition: opacity 0.05s linear;
+}
+
 
 /* === CRT EFFECTS === */
 .crt::before {
