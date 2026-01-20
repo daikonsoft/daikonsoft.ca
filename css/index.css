@@ -89,6 +89,7 @@ body {
   transform: translateZ(0);
 }
 
+/* Forces gpu acceleration maybe? */
 .crt::before,
 .crt::after {
   contain: layout style paint;
@@ -99,79 +100,6 @@ body.fx::before,
 body.fx::after {
   animation: flicker 0.15s infinite;
 }
-
-/* === CRT ANIMATIONS === */
-
-@keyframes flicker {
-    0% {
-    opacity: 0.27861;
-    }
-    5% {
-    opacity: 0.34769;
-    }
-    10% {
-    opacity: 0.23604;
-    }
-    15% {
-    opacity: 0.90626;
-    }
-    20% {
-    opacity: 0.18128;
-    }
-    25% {
-    opacity: 0.83891;
-    }
-    30% {
-    opacity: 0.65583;
-    }
-    35% {
-    opacity: 0.67807;
-    }
-    40% {
-    opacity: 0.26559;
-    }
-    45% {
-    opacity: 0.84693;
-    }
-    50% {
-    opacity: 0.96019;
-    }
-    55% {
-    opacity: 0.08594;
-    }
-    60% {
-    opacity: 0.20313;
-    }
-    65% {
-    opacity: 0.71988;
-    }
-    70% {
-    opacity: 0.53455;
-    }
-    75% {
-    opacity: 0.37288;
-    }
-    80% {
-    opacity: 0.71428;
-    }
-    85% {
-    opacity: 0.70419;
-    }
-    90% {
-    opacity: 0.7003;
-    }
-    95% {
-    opacity: 0.36108;
-    }
-    100% {
-    opacity: 0.24387;
-    }
-}
-
-
-
-
-
 
 /* === CONTAINER === */
 .container {
@@ -341,10 +269,6 @@ body.fx::after {
   color: var(--header-color);
 }
 
-/* .button:hover {
-  animation: wiggle 0.25s 2;
-} */
-
 .button:hover a {
   text-shadow:
     3px 2px rgba(246, 0, 153, 0.7),
@@ -411,18 +335,6 @@ body.fx::after {
   color: var(--header-color);
   text-align: center;
   box-shadow: 0 0 4px #cba6f740 inset;
-  background-color: #34354a;
-}
-
-.text-header2 {
-  grid-area: text-header2;
-  border: 1px solid var(--border-color);
-  border-bottom: none;
-  border-radius: 20px 20px 0 0;
-  padding: 10px;
-  text-align: left;
-  box-shadow: 0 0 4px #cba6f740 inset;
-  padding: 10px;
   background-color: #34354a;
 }
 
@@ -495,6 +407,73 @@ body.fx::after {
   100% {
     transform: translateY(110vh) rotate(360deg);
   }
+}
+
+/* === CRT ANIMATIONS === */
+@keyframes flicker {
+    0% {
+    opacity: 0.27861;
+    }
+    5% {
+    opacity: 0.34769;
+    }
+    10% {
+    opacity: 0.23604;
+    }
+    15% {
+    opacity: 0.90626;
+    }
+    20% {
+    opacity: 0.18128;
+    }
+    25% {
+    opacity: 0.83891;
+    }
+    30% {
+    opacity: 0.65583;
+    }
+    35% {
+    opacity: 0.67807;
+    }
+    40% {
+    opacity: 0.26559;
+    }
+    45% {
+    opacity: 0.84693;
+    }
+    50% {
+    opacity: 0.96019;
+    }
+    55% {
+    opacity: 0.08594;
+    }
+    60% {
+    opacity: 0.20313;
+    }
+    65% {
+    opacity: 0.71988;
+    }
+    70% {
+    opacity: 0.53455;
+    }
+    75% {
+    opacity: 0.37288;
+    }
+    80% {
+    opacity: 0.71428;
+    }
+    85% {
+    opacity: 0.70419;
+    }
+    90% {
+    opacity: 0.7003;
+    }
+    95% {
+    opacity: 0.36108;
+    }
+    100% {
+    opacity: 0.24387;
+    }
 }
 
 

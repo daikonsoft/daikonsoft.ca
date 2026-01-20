@@ -355,11 +355,6 @@ body.fx::after {
 
 }
 
-.button:hover {
-  -webkit-animation: wiggle 0.25s 2;
-  animation: wiggle 0.25s 2;
-}
-
 .button:hover a {
   text-shadow:
     3px 2px rgba(246, 0, 153, 0.7),
