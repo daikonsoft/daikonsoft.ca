@@ -12,7 +12,7 @@
       <title><![CDATA[Devlog 0.1 — Emotional Burrows & Research Rabbit Holes]]></title>
       <link>https://daikonsoft.ca/devlog.html?log=devlog-0-1</link>
       <guid isPermaLink="true">https://daikonsoft.ca/devlog.html?log=devlog-0-1</guid>
-      <pubDate>Tue, 20 Jan 2026 20:32:19 GMT</pubDate>
+      <pubDate>Thu, 22 Jan 2026 22:54:05 GMT</pubDate>
       <description><![CDATA[[Devlog 0.1 — Emotional Burrows & Research Rabbit Holes] [2025-11-24] I haven't worked on the game in a couple weeks, and the moment I opened the project my whole body went, “Nope...” as my mind flood...]]></description>
       <content:encoded><![CDATA[<div class="content">
 
@@ -62,7 +62,7 @@
                     <p>So bold of you to take ownership over <strong>MY</strong> schedule... I didn't know you knew how to program Pearl...</p>
                 </div>
 
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
 
             <div class="dialogue-box">
@@ -85,7 +85,7 @@
                     <p>*Sigh*... Anyways the onwnership of plans is irrevelent, all that matters is that progress is made, and this report gets sent out.</p>
                 </div>
 
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
 
             <div class="dialogue-box">
@@ -104,7 +104,7 @@
 
                 </div>
 
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
 
             <div class="dialogue-box">
@@ -125,7 +125,7 @@
                     <p>You know it might be possible if you let me experiment on your brain!</p>
                 </div>
 
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
 
             <div class="dialogue-box">
@@ -147,7 +147,7 @@
                     <p>Pearl would you like to explain what happened?</p>
                 </div>
 
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
 
             <div class="dialogue-box">
@@ -169,7 +169,7 @@
                 <p>Also Fixing that bug taught us something real about structuring entities and using child objects to isolate their components from eachother. So despite our shortcomings, tangible progress was made and with this the cause grows. It's like I always tell you pearl, "Intellectual growth is the catalyst for fear in our adversaries..."</p>
                 <p>So remind yourself, even if there is no tangible feature attached to it, learning something is always beneficial!</p>
                 </div>
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
 
             <div class="dialogue-box">
@@ -194,7 +194,7 @@
                 <p>Excellent. It works. But also: <em>why?</em> What is the Platform Effector doing? Why does polygon geometry matter? What forces govern this?</p>
                 <p>How could I possible live with myself without knowing the answer?</p>
                 </div>
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
 
             <div class="dialogue-box">
@@ -213,7 +213,7 @@
                 <div class="dialogue-text scientist">
                     <p>TMB?</p>
                 </div>
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
             <div class="dialogue-box">
                 <img src="https://daikonsoft.ca/assets/pearl-avatar.png" alt="avatar of cyborg bunny" class="dialogue-avatar">
@@ -231,7 +231,7 @@
                 <div class="dialogue-text scientist">
                     <p>I hate you so much...</p>
                 </div>
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
 
             <div class="dialogue-box">
@@ -259,7 +259,7 @@
 
             <p><strong>Pearl:</strong> And it is now a personal attack.</p>
                 </div>
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
             <div class="dialogue-box">
                                 <img src="https://daikonsoft.ca/assets/pearl-avatar.png" alt="avatar of cyborg bunny" class="dialogue-avatar">
@@ -277,7 +277,7 @@
                 <div class="dialogue-text scientist">
                 <p>I still do not know why the collider geometry must be polygons.</p>
                 </div>
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
             <div class="dialogue-box">
                 <img src="https://daikonsoft.ca/assets/pearl-avatar.png" alt="avatar of cyborg bunny" class="dialogue-avatar">
@@ -295,7 +295,7 @@
                 <div class="dialogue-text scientist">
                 <p>Every moment of unknowing is living hell :)</p>
                 </div>
-                <img src="https://daikonsoft.ca/assets/scientist-avatar-draft.jpg" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
+                <img src="https://daikonsoft.ca/assets/scientist-avatar.png" alt="avatar of a scientist bunny" class="dialogue-avatar-scientist">
             </div>
 
             <div class="dialogue-box">
