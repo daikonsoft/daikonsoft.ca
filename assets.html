@@ -1,27 +1,169 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Assets - Daikon Scramble</title>
-    <link rel="stylesheet" href="./css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="alternate" type="application/rss+xml" title="DaikonScramble Devlog" href="/feed.xml">
+
+  <title>DaikonSoft</title>
+ 
 </head>
-<body>
-    <nav>
-        <a href="./index.html">Home</a>
-        <a href="./devlog.html">Devlog</a>
-        <a href="./assets.html">Assets</a>
-    </nav>
-    
-    <h1>Development Assets</h1>
-    
-    <div class="gallery">
-        <div class="asset-item">
-            <img src="./assets/pearl.png" alt="Character Design">
-            <p>Character design with armor on</p>
-        </div>
-        <div class="asset-item">
-            <img src="./assets/nakedpearl.png" alt="Character Design">
-            <p>Character design body template</p>
-        </div>
+
+<body class="crt">
+
+<div class="container">
+  <div class="bar">DaikonSoft</div>
+  <div class="bunny-button"><img src="./assets/bunny-button.png" alt="Bunny Icon"></div>
+
+
+  <div class="main">
+    <div class="navigation">
+      <div class="title">Navigation</div>
+      <div class="button"><a href="./index.html">Home</a></div>
+      <div class="button"><a href="./devlog.html">Devlog</a></div>
+      <div class="button" style="border-bottom:1px solid var(--border-color);"><a href="./assets.html">Assets</a></div>
     </div>
+    <div class="box">
+      <div class="box-content">
+      <div class="pixel-pearl blossom-toggle" ><img src="./assets/pearl.png" alt="Pearl Pixel Art" style="transform: scaleX(-1);"></div>
+      <h2>DaikonScramble</h2>
+      <div class="pixel-pearl blossom-toggle"><img src="./assets/pearl.png" alt="Pearl Pixel Art"></div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="text-box">
+      <div class="text-header">Assets</div>
+      <div class="text-wrapper">
+        <div class="text" style="border-bottom:none;border-radius: 0 10px 0 0;">
+          <img src="./assets/pearl.png" alt="Pearls in game model with armor" class="pixel-pearl" style="width: 200px; image-rendering: pixelated; transform: scaleX(-1);">
+          <p>Pearl: In game model.</p>
+        </div>
+        <div class="text" style="border-radius: 0 0 10px 10px"> 
+          <img src="./assets/nakedpearl.png" alt="Pearls in game model without armor" class="pixel-pearl" style="width: 200px; image-rendering: pixelated; transform: scaleX(-1);">
+          <p>Pearl: In game model without armor.</p>
+        </div>
+        <div class="text" style="border-radius: 0 0 10px 10px"> 
+          <img src="./assets/pearl-avatar.png" alt="Pearls dialogue avatar" class="pixel-pearl">
+          <p>Pearl: Avatar.</p>
+        </div>
+        <div class="text" style="border-radius: 0 0 10px 10px"> 
+          <img src="./assets/scientist-avatar.png" alt="Scientist dialogue avatar" class="pixel-pearl">
+          <p>Scientist: Avatar.</p>
+        </div>
+      </div>
+      </div>
+  
+      
+      </div>
+    </div>
+  <div class="footer">
+    Made with passion and a bit of desperation.
+  </div>
+</div>
+
+<div id="blossom-container"></div>
+<div id="custom-cursor"></div>
+
+<script>
+// === GLOBAL STATE ===
+let blossomInterval = null;
+let blossomsOn = false;
+
+
+// === INITIALIZATION ===
+function init() {
+  setupCRTButton();
+  setupBlossomToggles();
+}
+
+
+// === CRT TOGGLE ===
+function setupCRTButton() {
+  const btn = document.querySelector('.bunny-button');
+  if (!btn) return;
+
+  // Remove old listeners by cloning node
+  btn.replaceWith(btn.cloneNode(true));
+  const freshBtn = document.querySelector('.bunny-button');
+
+  freshBtn.addEventListener('click', () => {
+    document.body.classList.toggle('fx');
+  });
+}
+
+
+// === BLOSSOMS ===
+function createBlossom() {
+  const blossom = document.createElement('div');
+  blossom.classList.add('blossom');
+  blossom.innerHTML = '<img src="./assets/neskaya8.gif">';
+
+  const size = Math.random() * 12 + 12;
+  const xPos = Math.random() * window.innerWidth;
+
+  blossom.style.left = xPos + 'px';
+  blossom.style.fontSize = size + 'px';
+  blossom.style.animationDuration = (Math.random() * 4 + 4) + 's';
+
+  document.getElementById('blossom-container').appendChild(blossom);
+
+  setTimeout(() => blossom.remove(), 9000);
+}
+
+
+// === BLOSSOM TOGGLE ===
+function setupBlossomToggles() {
+  // Remove possible duplicate intervals from previous visits
+  if (blossomInterval) {
+    clearInterval(blossomInterval);
+    blossomInterval = null;
+  }
+
+  // Reset state on load
+  blossomsOn = false;
+
+  // Remove any old listeners by cloning nodes
+  document.querySelectorAll('.blossom-toggle').forEach(el => {
+    el.replaceWith(el.cloneNode(true));
+  });
+
+  // Re-select new clean nodes
+  document.querySelectorAll('.blossom-toggle').forEach(el => {
+    el.addEventListener('click', () => {
+      blossomsOn = !blossomsOn;
+
+      if (blossomsOn) {
+        blossomInterval = setInterval(createBlossom, 250);
+      } else {
+        clearInterval(blossomInterval);
+        blossomInterval = null;
+      }
+    });
+  });
+}
+
+
+// === RUN INIT ===
+window.addEventListener('pageshow', init);
+
+// === GIF CURSOR ===
+const cursor = document.getElementById('custom-cursor');
+let cursorInitialized = false;
+
+document.addEventListener('mousemove', (e) => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top = e.clientY + 'px';
+
+  if (!cursorInitialized) {
+    cursorInitialized = true;
+    cursor.style.opacity = 1;
+  }
+});
+
+
+</script>
+
 </body>
 </html>
+
